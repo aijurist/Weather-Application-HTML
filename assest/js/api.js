@@ -22,7 +22,7 @@ export const url ={
         return `https://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=5`
     },
     /**
-     * @param {string} query search query e.g. :"london" , "New Yourk"  
+     * @param {string} query search query e.g. :"london" , "New York"  
      */
     geo(query){
         return `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5`

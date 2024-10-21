@@ -31,7 +31,7 @@ searchField.addEventListener("input",()=>{
     if(!searchField.value){
         searchResult.classList.remove("active");
         searchResult.innerHTML="";
-        searchField.classList.remove("searchign");
+        searchField.classList.remove("searching");
     }
     else{
         searchField.classList.add("searching");
@@ -280,15 +280,15 @@ export const updateWeather = (lat,lon)=>{
                     <ul data-forecast-list></ul>
                 </div>
             `;
-            for(let i=7,len=forecastList.length;i<len;i+=8){
+            for(let i = 7, len = forecastList.length; i < len; i += 8){
                 const{
                     main:{temp_max},
                     weather,
                     dt_txt
                 }=forecastList[i];
                 const [{icon,description}]=weather;
-                const date =new Date(dt_txt);
-                const li =document.createElement("li");
+                const date = new Date(dt_txt);
+                const li = document.createElement("li");
                 li.classList.add("card-item");
                 li.innerHTML=`
                     <div class="icon-wrapper">
